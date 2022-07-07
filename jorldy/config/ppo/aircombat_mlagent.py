@@ -1,6 +1,6 @@
 ### PPO Hopper Config ###
 
-env = {"name": "aircombat_mlagent", "time_scale": 12.0}
+env = {"name": "air_combat_mlagent", "time_scale": 12.0}
 
 agent = {
     "name": "ppo",
@@ -24,7 +24,7 @@ optim = {
 train = {
     "training": True,
     "load_path": None,
-    "run_step": 10000000,
+    "run_step": 300000,
     "print_period": 5000,
     "save_period": 50000,
     "eval_iteration": 10,
