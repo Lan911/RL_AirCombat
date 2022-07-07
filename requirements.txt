@@ -1,0 +1,11 @@
+black==22.1.0
+gym[classic_control]==0.23.0
+mlagents-envs==0.28.0
+opencv-python==4.5.5.64
+procgen==0.10.7
+pygifsicle==1.0.5
+pytest==7.1.0
+ray==1.11.0
+tensorboard==2.8.0
+torch==1.10.0
+protobuf==3.20.0
