@@ -25,6 +25,7 @@ class _MLAgent(BaseEnv):
     def __init__(self, env_name, render=False, time_scale=12.0, id=None, **kwargs):
         # env_path = f"./core/env/mlagents/{env_name}/{match_build()}/{env_name}"
         env_path = f"../../mlagents-env/{env_name}/{match_build()}/{env_name}"
+        print("env_path:", env_path)
         id = (
             np.random.randint(65534 - UnityEnvironment.BASE_ENVIRONMENT_PORT)
             if id is None
