@@ -27,4 +27,4 @@ def test_air_combat_mlagent(MockAgent):
     env = AirCombatMLAgent()
     agent = MockAgent(env.state_size, env.action_size, env.action_type)
 
-    check_env(env, agent)
+    check_env(env, agent, run_step=10000)
