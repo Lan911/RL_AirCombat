@@ -5,9 +5,6 @@ from run_mode import *
 # default_config_path = "config.YOUR_AGENT.YOUR_ENV"
 default_config_path = "config.dqn.cartpole"
 
-from test.core.env.test_mlagent_env import test_air_combat_mlagent
-from test.conftest import MockAgent
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--single", action="store_true")
@@ -22,13 +19,11 @@ if __name__ == "__main__":
 
     config_path = args.config if args.config else default_config_path
 
-    # if args.single or choosed_mode_num == 0:
-    #     single_train(config_path, unknown)
-    # elif args.sync:
-    #     sync_distributed_train(config_path, unknown)
-    # elif args.__dict__["async"]:
-    #     async_distributed_train(config_path, unknown)
-    # elif args.eval:
-    #     evaluate(config_path, unknown)
-
-    test_air_combat_mlagent()
+    if args.single or choosed_mode_num == 0:
+        single_train(config_path, unknown)
+    elif args.sync:
+        sync_distributed_train(config_path, unknown)
+    elif args.__dict__["async"]:
+        async_distributed_train(config_path, unknown)
+    elif args.eval:
+        evaluate(config_path, unknown)
