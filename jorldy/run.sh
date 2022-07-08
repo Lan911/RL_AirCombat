@@ -1,3 +1,5 @@
+#cd RL_AirCombat/jorldy
+
 # Examples: python main.py [run mode] --config [config path]
 #python main.py --config config.dqn.cartpole
 #python main.py --async --config config.ape_x.cartpole
@@ -6,4 +8,4 @@
 #python main.py --config config.rainbow.atari --env.name breakout
 #python main.py --sync --config config.ppo.cartpole --train.num_workers 8
 
-python main.py --config config.ppo.hopper_mlagent
+python main.py --single --config config.ppo.air_combat_mlagent

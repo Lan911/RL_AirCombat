@@ -123,16 +123,6 @@ class DroneDeliveryMLAgent(_MLAgent):
         self.action_size = 3
         self.action_type = "continuous"
 
-
-class AirCombatMLAgent(_MLAgent):
-    def __init__(self, **kwargs):
-        env_name = "AirCombat"
-        super(AirCombatMLAgent, self).__init__(env_name, **kwargs)
-
-        self.state_size = 65
-        self.action_size = 6
-        self.action_type = "continuous"
-
     def state_processing(self, obs):
         vis_obs = []
 
@@ -148,3 +138,13 @@ class AirCombatMLAgent(_MLAgent):
         vis_obs = (vis_obs * 255).astype(np.uint8)
 
         return [vis_obs, vec_obs]
+
+
+class AirCombatMLAgent(_MLAgent):
+    def __init__(self, **kwargs):
+        env_name = "AirCombat"
+        super(AirCombatMLAgent, self).__init__(env_name, **kwargs)
+
+        self.state_size = 65
+        self.action_size = 6
+        self.action_type = "continuous"
