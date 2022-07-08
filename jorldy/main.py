@@ -31,4 +31,4 @@ if __name__ == "__main__":
     # elif args.eval:
     #     evaluate(config_path, unknown)
 
-    test_air_combat_mlagent(MockAgent)
+    test_air_combat_mlagent()
