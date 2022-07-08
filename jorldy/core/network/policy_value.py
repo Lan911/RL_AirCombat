@@ -37,6 +37,7 @@ class DiscretePolicySeparateValue(DiscretePolicyValue):
 
 class ContinuousPolicyValue(BaseNetwork):
     def __init__(self, D_in, D_out, D_hidden=512, head="mlp"):
+        print("D_in:%s,D_out:%s,D_hidden:%s" % (str(D_in), str(D_out), str(D_hidden)))
         D_head_out = super(ContinuousPolicyValue, self).__init__(D_in, D_hidden, head)
         self.l = torch.nn.Linear(D_head_out, D_hidden)
         self.mu = torch.nn.Linear(D_hidden, D_out)
