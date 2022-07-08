@@ -1,4 +1,4 @@
-from test.core.env.utils import check_env
+from .utils import check_env
 from core.env.mlagent import HopperMLAgent, PongMLAgent, DroneDeliveryMLAgent, AirCombatMLAgent
 
 
