@@ -145,6 +145,6 @@ class AirCombatMLAgent(_MLAgent):
         env_name = "AirCombat"
         super(AirCombatMLAgent, self).__init__(env_name, **kwargs)
 
-        self.state_size = 65
+        self.state_size = 8
         self.action_size = 6
         self.action_type = "continuous"

@@ -6,6 +6,8 @@ def check_interact(env, agent, run_step):
         next_state, reward, done = env.step(action_dict["action"])
         print("next_state:", next_state.shape)
         print("env.state_size:", env.state_size)
+        print("reward:", reward)
+        print("done:", done)
 
         if isinstance(env.state_size, int):
             assert next_state.shape == (1, env.state_size)
