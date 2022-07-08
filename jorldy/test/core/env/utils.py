@@ -2,7 +2,10 @@ def check_interact(env, agent, run_step):
     state = env.reset()
     for _ in range(run_step):
         action_dict = agent.act(state)
+        print("action_dict:", type(action_dict), type(action_dict["action"]))
         next_state, reward, done = env.step(action_dict["action"])
+        print("next_state:", next_state.shape)
+        print("env.state_size:", env.state_size)
 
         if isinstance(env.state_size, int):
             assert next_state.shape == (1, env.state_size)
@@ -28,7 +31,6 @@ def check_record(env):
 
 
 def check_env(env, agent, run_step=10):
-
     # test interact
     check_interact(env, agent, run_step)
 
