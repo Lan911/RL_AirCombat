@@ -28,6 +28,3 @@ def test_air_combat_mlagent(MockAgent):
     agent = MockAgent(env.state_size, env.action_size, env.action_type)
 
     check_env(env, agent)
-
-
-test_air_combat_mlagent()
