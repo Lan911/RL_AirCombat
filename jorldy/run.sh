@@ -7,5 +7,6 @@
 # Examples: python main.py [run mode] --config [config path] --[optional parameter key] [parameter value]
 #python main.py --config config.rainbow.atari --env.name breakout
 #python main.py --sync --config config.ppo.cartpole --train.num_workers 8
-
-python main.py --single --config config.ppo.air_combat_mlagent
+{
+  python main.py --sync --config config.ppo.air_combat_mlagent --train.num_workers 16
+}&
